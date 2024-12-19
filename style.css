@@ -1,0 +1,369 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: rgb(3, 4, 12);
+  color: white;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.AboutMe {
+  padding: 30px 2% 0;
+  animation: slideTop 1s ease forwards;
+}
+/* Section Heading */
+h1 {
+  background-color: rgb(127, 160, 250);
+  box-shadow: 0 0 20px rgb(169, 196, 251);
+  border-radius: 12px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.text-center {
+  margin-bottom: 30px;
+}
+
+/* Common Container Styles */
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Flashcard & Education Card Styles */
+.flashcard,
+.education-card,
+.skill-card {
+  background-color: #1c1c1c; /* Black background */
+  color: #f2e2e2; /* White text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flashcard:hover,
+.education-card:hover,
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(231, 250, 250, 0.873);
+}
+
+/* Image Styles */
+.education-card .college-logo,
+.skill-card ul li img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Horizontal Rule */
+hr {
+  width: 50%;
+  margin: 10px auto;
+  border: 1px solid #fff;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.skills-cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-card h4 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  background-color: #444;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.skill-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.skill-card ul li img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.skill-card ul li span {
+  color: #1e90ff;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideRight 2s ease forwards;
+}
+
+.home-content h3 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: -2px 0;
+}
+
+.home-content h4 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.home-content h4 span {
+  color: rgb(130, 21, 239);
+}
+
+/* Button Styles */
+.butt {
+  font-size: 24px;
+  font-weight: 300;
+  border-radius: 50px;
+  margin: 1% 12px;
+  color: white;
+  border: 2px solid rgb(56, 153, 189);
+  background-color: rgb(92, 156, 209);
+  box-shadow: 0 0 50px rgb(157, 209, 240);
+  animation: slideRight 2s ease forwards;
+}
+
+/* Social Media Styles */
+.social-media a svg {
+  margin: 1% 12px;
+  border: 2px solid rgb(166, 224, 244);
+  box-shadow: 0 0 40px rgb(167, 222, 242);
+  border-radius: 50%;
+  background: transparent;
+  animation: slideRight 2s ease forwards;
+}
+
+/* Section Animations */
+.About,
+.AboutMe,
+.Projects-section,
+.Skills-section,
+.Connect-section {
+  padding: 30px 2% 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.carousel-items,
+.project-items {
+  padding: 20px 1% 0;
+  text-align: justify;
+}
+
+.carousel-items h3,
+.project-items h3 {
+  text-align: center;
+}
+
+.carousel-items img,
+.project-items img {
+  border-radius: 8px;
+  margin-left: 40%;
+  width: 100px;
+  height: 80px;
+}
+
+.project-items p,
+.project-items li,
+.project-items h5 {
+  animation: slideRight 2s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-img {
+    order: -1;
+  }
+
+  .project-items img {
+    margin-left: 12%;
+    width: 300px;
+    height: 200px;
+  }
+
+  .Skills-section img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .Connect-section div {
+    margin-left: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .project-items img {
+    margin-left: 8%;
+    width: 600px;
+    height: 260px;
+  }
+
+  .butt2 {
+    margin-left: 42%;
+  }
+
+  .Skills-section img,
+  .Connect-section img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .Connect-section div {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .project-items img {
+    margin-left: 10%;
+    width: 900px;
+    height: 260px;
+  }
+
+  .butt2 {
+    margin-left: 42%;
+  }
+
+  .Skills-section img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .Connect-section div {
+    margin-left: 35%;
+  }
+}
+section{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+h3{
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+#propic{
+  width:230px;
+  height:330px;
+  border-radius: 50%;
+  border: 1px solid rgb(214, 226, 241);
+  box-shadow: 0 0 30px rgb(221, 242, 248);
+}
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.floating-text {
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.floating-text {
+  animation: float 3s ease-in-out infinite;
+}
+
+
+
+@keyframes slideLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Image style */
+.home-img img {
+  border-radius: 50%;
+  /* box-shadow: 0px 15px 15px aliceblue; */
+  transition: transform 1.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  animation: slideLeftRight 5s infinite ease-in-out; /* Slide animation */
+}
+
+/* Hover effect: scaling, shadow color change */
+.home-img img:hover {
+  transform: scale(1.1); /* Scale the image on hover */
+  /* box-shadow: 0px 15px 30px aliceblue; Blue shadow on hover */
+}
